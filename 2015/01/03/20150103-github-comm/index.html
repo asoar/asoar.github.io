@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>github 常用命令 | 只解沙场为国死   何须马革裹尸还</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、查看当前git的版本 $ git version   #查看当前git版本 2、Debian或Ubuntu linux系统上的命令安装git $ sudo apt-get install git-core #系统版本老一点 $ sudo apt-get install git      #系统版本新一点 3、Mac OS X系统上是通过homebrew来安装git $ brew install">
+<meta name="keywords" content="Git-Command">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github 常用命令">
+<meta property="og:url" content="http://yoursite.com/2015/01/03/20150103-Github-comm/index.html">
+<meta property="og:site_name" content="只解沙场为国死   何须马革裹尸还">
+<meta property="og:description" content="1、查看当前git的版本 $ git version   #查看当前git版本 2、Debian或Ubuntu linux系统上的命令安装git $ sudo apt-get install git-core #系统版本老一点 $ sudo apt-get install git      #系统版本新一点 3、Mac OS X系统上是通过homebrew来安装git $ brew install">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-05T06:04:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="github 常用命令">
+<meta name="twitter:description" content="1、查看当前git的版本 $ git version   #查看当前git版本 2、Debian或Ubuntu linux系统上的命令安装git $ sudo apt-get install git-core #系统版本老一点 $ sudo apt-get install git      #系统版本新一点 3、Mac OS X系统上是通过homebrew来安装git $ brew install">
+  
+    <link rel="alternate" href="/atom.xml" title="只解沙场为国死   何须马革裹尸还" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">只解沙场为国死   何须马革裹尸还</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">寻！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20150103-Github-comm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/03/20150103-Github-comm/" class="article-date">
+  <time datetime="2015-01-03T02:20:27.000Z" itemprop="datePublished">2015-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      github 常用命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、查看当前git的版本</p>
+<pre><code>$ git version   #查看当前git版本
+</code></pre><p>2、Debian或Ubuntu linux系统上的命令安装git</p>
+<pre><code>$ sudo apt-get install git-core #系统版本老一点
+$ sudo apt-get install git      #系统版本新一点
+</code></pre><p>3、Mac OS X系统上是通过homebrew来安装git</p>
+<pre><code>$ brew install git  #前提是已经安装homebrew
+</code></pre><p>4、Window 系统可以去Git官网<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a></p>
+<pre><code>$安装完成后，打开Git Bash
+</code></pre><p>5、安装完成后，还需要最后一步设置，在命令行输入：</p>
+<pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;
+每个机器都必须自报家门：你的名字和Email地址。用了--global参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
+</code></pre><p>6、生成密钥，关联远端仓库时候需要提供公钥，本地保存私钥.</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+在本地/User/.ssh/ 目录下有会生成两个文件id_rsa、id_rsa.pub，id_rsa文件保存的是私钥，保存于本地，id_rsa.pub文件保存的是公钥，需要将里面内容上传到远端仓库
+</code></pre><p>7、查看用户名和邮箱地址.</p>
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre><a id="more"></a>
+<p>8、一些常用命令:</p>
+<pre><code>$ git init  #把当前目录变成Git可以管理的本地仓库
+$ git add 文件   #告诉Git，把文件添加到本地仓库
+$ git add .     #把当前所有文件添加到本地仓库
+$ git commit -m &quot;说明&quot;   #告诉Git，把文件提交到本地仓库，并说明一下本次提交
+$ git status    #查看当前仓库状态
+$ git diff      #查看当前仓库修改了的文件和修改的内容
+$ git log       #查看最近到最远的提交日志,追加一个参数看看 --pretty=oneline
+$ git remote add origin git@github.com:xxx/yyy.git  #将本地仓库和远程仓库关联
+$ git push -u origin master    #第一次推送到远程master分支，并且把本地master分支和远程master分支关联起来,以后的推送或者拉取时就可以简化命令
+$ git clone 远程仓库地址  #将远端代码克隆到当前目录,若要指定目录则在后面追加YourDir
+$ git branch            #查看本地仓库所有分支
+$ git branch -r         #查看远程仓库所有分支
+$ git branch -a         #查看本地和远程仓库所有分支
+$ git branch 分支名      #新建分支
+$ git branch -d 分支名   #删除分支
+$ git checkout 分支名 #切换分支
+$ git remote -v     #查看远程仓库地址
+</code></pre><p>全局配置</p>
+<pre><code>$ git config --global user.name &quot;yourname&quot;  #git的用户名
+$ git config --global user.email &quot;email@example.com&quot;  #git的登录账号
+$ git config --global core.editor vim    #设置默认编辑器
+$ git config --global merge.tool vimdiff #设置默认的对比文件差异工具
+$ git config --global color.status auto  #显示颜色信息
+$ git config --global color.branch auto  #显示颜色信息
+$ git config --global color.interactive auto #显示颜色信息
+$ git config --global color.diff auto     #显示颜色信息
+$ git config --global push.default simple #简化提交
+$ git config core.ignorecase false #设置大小写敏感
+$ git config --list #查看配置的信息
+$ git help config   #获取帮助信息
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/03/20150103-Github-comm/" data-id="cjloqqw4b0003wa8mqpnvvdi6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git-Command/">Git-Command</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/04/20150104-Homebrew/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Homebrew
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/02/20150102-Hexo-comm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo 命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git-Command/">Git-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Command/">Hexo-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-blog/">Hexo-blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac搭建nginx-rtmp服务器/">Mac搭建nginx+rtmp服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/专业词汇/">专业词汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常见排序算法/">常见排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浅谈库文件/">浅谈库文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译和链接/">编译和链接</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络通信七层模型/">网络通信七层模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件设计模式/">软件设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git-Command/" style="font-size: 10px;">Git-Command</a> <a href="/tags/Hexo-Command/" style="font-size: 10px;">Hexo-Command</a> <a href="/tags/Hexo-blog/" style="font-size: 10px;">Hexo-blog</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Mac搭建nginx-rtmp服务器/" style="font-size: 10px;">Mac搭建nginx+rtmp服务器</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/专业词汇/" style="font-size: 10px;">专业词汇</a> <a href="/tags/常见排序算法/" style="font-size: 10px;">常见排序算法</a> <a href="/tags/浅谈库文件/" style="font-size: 10px;">浅谈库文件</a> <a href="/tags/编译和链接/" style="font-size: 10px;">编译和链接</a> <a href="/tags/网络通信七层模型/" style="font-size: 10px;">网络通信七层模型</a> <a href="/tags/软件设计模式/" style="font-size: 10px;">软件设计模式</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/20170423-软件设计模式/">设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/21/20170321-Mac搭建nginx+rtmp/">nginx+rtmp服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/03/20160203-浅谈库文件/">浅谈库文件</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/01/20160201-编译与链接/">编译和链接</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/25/20160125-开放系统互联/">开放系统互联</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 寻！<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
