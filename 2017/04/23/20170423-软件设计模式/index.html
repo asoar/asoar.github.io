@@ -7,18 +7,18 @@
   
   <title>设计模式 | 只解沙场为国死   何须马革裹尸还</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。 $ lan 2、 1、适配器模式 2、桥接模式 3、门面模式 4、单例模式 5、代理模式 6、装饰模式 7、模板模式 8、工厂模式 9、命令模式 10、观察者模式 11、策略模式 12、建造者模式 13、责任链模式 14、迭代器模式 15、享元模式 16、解释器模式">
+  <meta name="description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。    &amp;lt;懒汉模式&amp;gt;   优点-&amp;gt;是延迟加载（需要的时候才去加载）,适合单线程操作   缺点-&amp;gt;是非线程安全的，在多线程中很容易出现不同步的情况 public class Singleton {       /* 私有静态实例，防止被引用，此处">
 <meta name="keywords" content="软件设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式">
 <meta property="og:url" content="http://yoursite.com/2017/04/23/20170423-软件设计模式/index.html">
 <meta property="og:site_name" content="只解沙场为国死   何须马革裹尸还">
-<meta property="og:description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。 $ lan 2、 1、适配器模式 2、桥接模式 3、门面模式 4、单例模式 5、代理模式 6、装饰模式 7、模板模式 8、工厂模式 9、命令模式 10、观察者模式 11、策略模式 12、建造者模式 13、责任链模式 14、迭代器模式 15、享元模式 16、解释器模式">
+<meta property="og:description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。    &amp;lt;懒汉模式&amp;gt;   优点-&amp;gt;是延迟加载（需要的时候才去加载）,适合单线程操作   缺点-&amp;gt;是非线程安全的，在多线程中很容易出现不同步的情况 public class Singleton {       /* 私有静态实例，防止被引用，此处">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-25T02:01:55.000Z">
+<meta property="og:updated_time" content="2018-10-25T03:09:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
-<meta name="twitter:description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。 $ lan 2、 1、适配器模式 2、桥接模式 3、门面模式 4、单例模式 5、代理模式 6、装饰模式 7、模板模式 8、工厂模式 9、命令模式 10、观察者模式 11、策略模式 12、建造者模式 13、责任链模式 14、迭代器模式 15、享元模式 16、解释器模式">
+<meta name="twitter:description" content="一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。 1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。    &amp;lt;懒汉模式&amp;gt;   优点-&amp;gt;是延迟加载（需要的时候才去加载）,适合单线程操作   缺点-&amp;gt;是非线程安全的，在多线程中很容易出现不同步的情况 public class Singleton {       /* 私有静态实例，防止被引用，此处">
   
     <link rel="alternate" href="/atom.xml" title="只解沙场为国死   何须马革裹尸还" type="application/atom+xml">
   
@@ -93,29 +93,242 @@
       
         <p>一、设计模式大致分为三大类：创建型模式、结构型模式和行为型模式。</p>
 <p>1、单例模式：保证一个类只有一个实例，提供一个访问它的全局访问点。</p>
-<pre><code>$ lan
-</code></pre><p>2、</p>
-<p>1、适配器模式</p>
-<p>2、桥接模式</p>
-<p>3、门面模式</p>
-<p>4、单例模式</p>
-<p>5、代理模式</p>
-<p>6、装饰模式</p>
-<p>7、模板模式</p>
-<p>8、工厂模式</p>
-<p>9、命令模式</p>
-<p>10、观察者模式</p>
-<p>11、策略模式</p>
-<p>12、建造者模式</p>
-<p>13、责任链模式</p>
-<p>14、迭代器模式</p>
-<p>15、享元模式</p>
-<p>16、解释器模式</p>
+<p>   &lt;懒汉模式&gt;<br>   优点-&gt;是延迟加载（需要的时候才去加载）,适合单线程操作<br>   缺点-&gt;是非线程安全的，在多线程中很容易出现不同步的情况</p>
+<pre><code>public class Singleton {  
+    /* 私有静态实例，防止被引用，此处赋值为null，目的是实现延迟加载 */  
+    private static Singleton instance = null;  
 
+    /* 私有构造方法，防止被实例化 */  
+    private Singleton() {}  
+
+    /* 1:懒汉式，静态工程方法，创建实例 */  
+    public static Singleton getInstance() {  
+        if (instance == null) {  
+            instance = new Singleton();  
+        }  
+        return instance;  
+    }  
+}
+</code></pre><p>   双重线程检查<br>   优点-&gt;延迟加载，线程安全<br>   缺点-&gt;写法复杂，不简洁</p>
+<pre><code>public class SingletonInner { 
+    /* volatile保证每个线程能够获取该变量的最新值，从而避免出现数据脏读的现象*/ 
+    private static volatile SingletonInner sInst = null;  
+
+    /* 私有的构造函数 */  
+    private SingletonInner() {}  
+
+    public static SingletonInner getInstance() {  
+        SingletonInner inst = sInst;  // 创建临时变量
+        if (inst == null) {
+            synchronized (SingletonInner.class) {
+                inst = sInst;
+                if (inst == null) {
+                    inst = new SingletonInner();
+                    sInst = inst;
+                }
+            }
+        }
+        return inst;  // 注意这里返回的是临时变量
+    }
+</code></pre><p>   内部类的实现<br>   优点：延迟加载，线程安全（java中class加载时互斥的），也减少了内存消耗，推荐使用内部类方式。</p>
+<pre><code>public class SingletonInner {  
+    /* 内部类实现单例模式,延迟加载，减少内存开销 */  
+    private static class SingletonHolder {  
+        private static SingletonInner instance = new SingletonInner();  
+    }  
+
+    /* 私有的构造函数 */  
+    private SingletonInner() {}  
+
+    public static SingletonInner getInstance() {  
+        return SingletonHolder.instance;  
+    }  
+}  
+</code></pre><p>   &lt;饿汉模式&gt;<br>   优点-&gt;是线程安全的，以空间换时间</p>
+<pre><code>public class Singleton {
+    //将构造方法私有化，不允许外部直接创建对象
+    private Singleton(){}
+
+    //创建类的唯一实例，使用private static修饰
+    private static Singleton instance = new Singleton();
+
+    //提供一个用于获取实例的方法，使用public static修饰
+    public static Singleton getInstance(){
+        return instance;
+    }
+}
+</code></pre><p>2、工厂模式: 为创建对象提供过渡接口，以便将创建对象的具体过程屏蔽隔离起来，达到提高灵活性的目的。<br>   &lt;简单工厂模式Simple Factory&gt;<br>   又称为静态工厂方法模式，不利于产生系列产品</p>
+<pre><code>public class Factory{ //getClass 产生Sample 一般可使用动态类装载装入类。
+    public static Sample creator(int which){ 
+        if (which==1)
+            return new SampleA();
+        else if (which==2)
+            return new SampleB();
+    }
+}
+</code></pre><p>   &lt;工厂方法模式Factory Method&gt;<br>   是简单工厂模式的进一步抽象化和推广，工厂方法模式里不再只由一个工厂类决定那一个产品类应当被实例化,这个决定被交给抽象工厂的子类去做。</p>
+<pre><code>//抽象产品角色
+public interface Moveable {
+    void run();
+}
+//具体产品角色
+public class Plane implements Moveable {
+    @Override
+    public void run() {
+        System.out.println(&quot;plane....&quot;);
+    }
+}
+//具体产品角色
+public class Broom implements Moveable {
+    @Override
+    public void run() {
+        System.out.println(&quot;broom.....&quot;);
+    }
+}
+//抽象工厂
+public abstract class VehicleFactory {
+    abstract Moveable create();
+}
+//具体工厂
+public class PlaneFactory extends VehicleFactory{
+    public Moveable create() {
+    return new Plane();
+    }
+}
+//具体工厂
+public class BroomFactory extends VehicleFactory{
+    public Moveable create() {
+        return new Broom();
+    }
+}
+//测试类
+public class Test {
+    public static void main(String[] args) {
+        VehicleFactory factory = new BroomFactory();
+        Moveable m = factory.create();
+        m.run();
+    }
+}
+</code></pre><p>3、观察者模式: 又叫发布-订阅(Publish/Subscribe)模式。定义了一种一对多的依赖关系，让多个观察者对象同时监听某一主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己。</p>
+<pre><code>/**  
+* Subject(目标，Subject)：    
+* 目标知道它的观察者。可以有任意多个观察者观察同一个目标。  
+* 提供注册和删除观察者对象的接口。  
+*/  
+public interface Subject {  
+    public void attach(Observer mObserver);  
+    public void detach(Observer mObserver);        
+    public void notice();  
+}
+
+/**  
+* Observer(观察者，Observer)：  
+* 为那些在目标发生改变时需要获得通知的对象定义一个更新接口。   
+*/  
+public interface Observer {  
+    public void update();  
+}  
+
+/**  
+* ConcreteSubject(具体目标，Teacher)  
+* 将有关状态存入各ConcreteObserve对象。  
+* 当他的状态发生改变时，向他的各个观察者发出通知。   
+*/  
+public class Teacher implements Subject{  
+
+    private String phone;  
+    private Vector students;  
+
+    public Teacher(){  
+        phone = &quot;&quot;;  
+        students = new Vector();  
+    }  
+
+    @Override  
+    public void attach(Observer mObserver) {  
+        students.add(mObserver);  
+    }  
+
+    @Override  
+    public void detach(Observer mObserver) {  
+        students.remove(mObserver);  
+    }  
+
+    @Override  
+    public void notice() {  
+        for(int i=0;i&lt;students.size();i++){  
+            ((Observer)students.get(i)).update();  
+        }  
+    }  
+
+    public String getPhone() {  
+        return phone;  
+    }  
+
+    public void setPhone(String phone) {  
+        this.phone = phone;  
+        notice();  
+    }  
+}
+
+/**  
+* ConcreteObserver(具体观察者, Student)：  
+* 维护一个指向ConcreteSubject对象的引用。  
+* 存储有关状态，这些状态应与目标的状态保持一致。  
+* 实现Observer的更新接口以使自身状态与目标的状态保持一致。  
+*/  
+public class Student implements Observer{  
+
+    private String name;  
+    private String phone;  
+    private Teacher mTeacher;  
+
+    public Student(String name,Teacher t){  
+        this.name = name;  
+        mTeacher = t;  
+    }  
+
+    public void show(){  
+        System.out.println(&quot;Name:&quot;+name+&quot;\nTeacher&apos;sphone:&quot; + phone);  
+    }  
+
+    @Override  
+    public void update() {  
+        phone = mTeacher.getPhone();  
+    }  
+}
+
+/**  
+* 观察者(Observer)模式测试类   
+*/  
+public class ObserverClient {  
+    public static void main(String[] args) {  
+        Vector students = new Vector();  
+        Teacher t = new Teacher();  
+        for(int i= 0;i&lt;10;i++){  
+            Student st = new Student(&quot;Andy.Chen&quot;+i,t);  
+            students.add(st);  
+            t.attach(st);  
+        }  
+
+        System.out.println(&quot;Welcome to Andy.Chen Blog!&quot; +&quot;\n&quot;   
+            +&quot;Observer Patterns.&quot; +&quot;\n&quot;  
+            +&quot;-------------------------------&quot;);  
+
+        t.setPhone(&quot;12345678&quot;);  
+        for(int i=0;i&lt;3;i++)  
+            ((Student)students.get(i)).show();  
+
+        t.setPhone(&quot;87654321&quot;);  
+        for(int i=0;i&lt;3;i++)  
+            ((Student)students.get(i)).show();  
+    }  
+} 
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/23/20170423-软件设计模式/" data-id="cjnny0z7d000d4p8mtgc4v6it" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/23/20170423-软件设计模式/" data-id="cjno0eirc000jpq8mogbbyyyk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件设计模式/">软件设计模式</a></li></ul>
