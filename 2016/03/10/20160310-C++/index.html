@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: 编译和链接 | 只解沙场为国死   何须马革裹尸还</title>
+  <title>C++ | 只解沙场为国死   何须马革裹尸还</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="只解沙场为国死   何须马革裹尸还">
-<meta property="og:url" content="http://yoursite.com/tags/编译和链接/index.html">
+  <meta name="description" content="一、面向对象的四个基本特征：抽象、封装、继承、多态(抽象、继承、封装是多态的基础，多态是抽象、封装、继承的表现) 1、32位机器上，指针sizeof为4个字节，64位机器上，指针sizeof为8个字节 2、空类也会被实例化，所以空类的sizeof为1个字节,非空类的sizeof就涉及到字节对齐问题 3、在没有特殊注明字节对齐时，系统会以默认的字节对齐规则进行字节对齐(常见对齐字节：1、2、4、8、">
+<meta name="keywords" content="C++知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++">
+<meta property="og:url" content="http://yoursite.com/2016/03/10/20160310-C++/index.html">
 <meta property="og:site_name" content="只解沙场为国死   何须马革裹尸还">
-<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:description" content="一、面向对象的四个基本特征：抽象、封装、继承、多态(抽象、继承、封装是多态的基础，多态是抽象、封装、继承的表现) 1、32位机器上，指针sizeof为4个字节，64位机器上，指针sizeof为8个字节 2、空类也会被实例化，所以空类的sizeof为1个字节,非空类的sizeof就涉及到字节对齐问题 3、在没有特殊注明字节对齐时，系统会以默认的字节对齐规则进行字节对齐(常见对齐字节：1、2、4、8、">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-25T04:41:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="只解沙场为国死   何须马革裹尸还">
-<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+<meta name="twitter:title" content="C++">
+<meta name="twitter:description" content="一、面向对象的四个基本特征：抽象、封装、继承、多态(抽象、继承、封装是多态的基础，多态是抽象、封装、继承的表现) 1、32位机器上，指针sizeof为4个字节，64位机器上，指针sizeof为8个字节 2、空类也会被实例化，所以空类的sizeof为1个字节,非空类的sizeof就涉及到字节对齐问题 3、在没有特殊注明字节对齐时，系统会以默认的字节对齐规则进行字节对齐(常见对齐字节：1、2、4、8、">
   
     <link rel="alternate" href="/atom.xml" title="只解沙场为国死   何须马革裹尸还" type="application/atom+xml">
   
@@ -67,40 +69,82 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/02/01/20160201-编译与链接/" class="archive-article-date">
-  <time datetime="2016-02-01T14:10:21.000Z" itemprop="datePublished">Feb 1</time>
+        <section id="main"><article id="post-20160310-C++" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/10/20160310-C++/" class="article-date">
+  <time datetime="2016-03-10T13:10:40.000Z" itemprop="datePublished">2016-03-10</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/01/20160201-编译与链接/">编译和链接</a>
+    <h1 class="article-title" itemprop="name">
+      C++
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、面向对象的四个基本特征：抽象、封装、继承、多态(抽象、继承、封装是多态的基础，多态是抽象、封装、继承的表现)</p>
+<p>1、32位机器上，指针sizeof为4个字节，64位机器上，指针sizeof为8个字节</p>
+<p>2、空类也会被实例化，所以空类的sizeof为1个字节,非空类的sizeof就涉及到字节对齐问题</p>
+<p>3、在没有特殊注明字节对齐时，系统会以默认的字节对齐规则进行字节对齐(常见对齐字节：1、2、4、8、16)</p>
+<p>4、#pragma pack(push,A字节)指明字节对齐规则以A字节为准，A也只能为(1、2、4、8、16)，#pragma pack(pop)为释放对齐规则(以64位机器为例)</p>
+<pre><code>class A{ 
+    char a[2]; 
+    char *p; 
+}; 
+sizeof(A对象) 为16
 
+#pragma pack(push,4)
+class A{ 
+    char a[2]; 
+    char *p; 
+};
+#pragma pack(pop)
+sizeof(A对象) 为12,如果把4改为2字节对齐，则结果为10
+注：在没指明字节对齐规则时，默认对齐方式以最大数据结构所占字节对齐，内存申请按顺序依次开辟空间，所以同样的数据类型不同顺序都会影响内存大小
+</code></pre><a id="more"></a>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/10/20160310-C++/" data-id="cjno3q5aj000jbm8mzjg4b2u5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-知识点/">C++知识点</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/23/20170423-软件设计模式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          设计模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/03/20160203-浅谈库文件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">浅谈库文件</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

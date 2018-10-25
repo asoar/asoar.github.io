@@ -328,10 +328,72 @@ public class ObserverClient {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/23/20170423-软件设计模式/" data-id="cjno0eirc000jpq8mogbbyyyk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/23/20170423-软件设计模式/" data-id="cjno3q5ao000lbm8m0qivrehz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/软件设计模式/">软件设计模式</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-20160310-C++" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/10/20160310-C++/" class="article-date">
+  <time datetime="2016-03-10T13:10:40.000Z" itemprop="datePublished">2016-03-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/10/20160310-C++/">C++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、面向对象的四个基本特征：抽象、封装、继承、多态(抽象、继承、封装是多态的基础，多态是抽象、封装、继承的表现)</p>
+<p>1、32位机器上，指针sizeof为4个字节，64位机器上，指针sizeof为8个字节</p>
+<p>2、空类也会被实例化，所以空类的sizeof为1个字节,非空类的sizeof就涉及到字节对齐问题</p>
+<p>3、在没有特殊注明字节对齐时，系统会以默认的字节对齐规则进行字节对齐(常见对齐字节：1、2、4、8、16)</p>
+<p>4、#pragma pack(push,A字节)指明字节对齐规则以A字节为准，A也只能为(1、2、4、8、16)，#pragma pack(pop)为释放对齐规则(以64位机器为例)</p>
+<pre><code>class A{ 
+    char a[2]; 
+    char *p; 
+}; 
+sizeof(A对象) 为16
+
+#pragma pack(push,4)
+class A{ 
+    char a[2]; 
+    char *p; 
+};
+#pragma pack(pop)
+sizeof(A对象) 为12,如果把4改为2字节对齐，则结果为10
+注：在没指明字节对齐规则时，默认对齐方式以最大数据结构所占字节对齐，内存申请按顺序依次开辟空间，所以同样的数据类型不同顺序都会影响内存大小
+</code></pre>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/10/20160310-C++/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/10/20160310-C++/" data-id="cjno3q5aj000jbm8mzjg4b2u5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-知识点/">C++知识点</a></li></ul>
 
     </footer>
   </div>
@@ -374,7 +436,7 @@ $
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/03/20160203-浅谈库文件/" data-id="cjno0eir8000hpq8mx24dttmf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/03/20160203-浅谈库文件/" data-id="cjno3q5ag000hbm8mbknmd5k4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浅谈库文件/">浅谈库文件</a></li></ul>
@@ -419,7 +481,7 @@ $
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/01/20160201-编译与链接/" data-id="cjno0eir3000dpq8miarobmbr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/01/20160201-编译与链接/" data-id="cjno3q5a6000fbm8mc4mnbqmy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编译和链接/">编译和链接</a></li></ul>
@@ -466,7 +528,7 @@ $
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/25/20160125-开放系统互联/" data-id="cjno0eir6000fpq8mz2ftang7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/25/20160125-开放系统互联/" data-id="cjno3q5a2000dbm8mgoxceyqs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络通信七层模型/">网络通信七层模型</a></li></ul>
@@ -522,7 +584,7 @@ $
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/03/20160103-计算机专业词汇/" data-id="cjno0eir1000bpq8mdy9v82pb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/03/20160103-计算机专业词汇/" data-id="cjno3q59x000bbm8mx91pk80l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/专业词汇/">专业词汇</a></li></ul>
@@ -610,7 +672,7 @@ int main(int argc, char *argv[])
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/15/20150215-常见排序算法/" data-id="cjno0eiqz0009pq8mtx9mm6p6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/02/15/20150215-常见排序算法/" data-id="cjno3q59u0009bm8m7ifg3urb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/常见排序算法/">常见排序算法</a></li></ul>
@@ -702,7 +764,7 @@ DELETE * FROM table                  删除表中所有的数据记录
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/07/20150105-SQL/" data-id="cjno0eiqu0005pq8mnxciedk3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/07/20150105-SQL/" data-id="cjno3q59o0005bm8mwpfaahfy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
@@ -750,7 +812,7 @@ DELETE * FROM table                  删除表中所有的数据记录
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/05/20150105-markdown/" data-id="cjno0eiqx0008pq8mvjerd11f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/05/20150105-markdown/" data-id="cjno3q59s0008bm8mzgxf7yv4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
@@ -810,72 +872,10 @@ $ brew uninstall git #卸载git
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/04/20150104-Homebrew/" data-id="cjno0eiqn0004pq8mlvzguop1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/04/20150104-Homebrew/" data-id="cjno3q59h0004bm8mbua5lnh8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Homebrew/">Homebrew</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20150103-Github-comm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/03/20150103-Github-comm/" class="article-date">
-  <time datetime="2015-01-03T02:20:27.000Z" itemprop="datePublished">2015-01-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/03/20150103-Github-comm/">github 常用命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、查看当前git的版本</p>
-<pre><code>$ git version   #查看当前git版本
-</code></pre><p>2、Debian或Ubuntu linux系统上的命令安装git</p>
-<pre><code>$ sudo apt-get install git-core #系统版本老一点
-$ sudo apt-get install git      #系统版本新一点
-</code></pre><p>3、Mac OS X系统上是通过homebrew来安装git</p>
-<pre><code>$ brew install git  #前提是已经安装homebrew
-</code></pre><p>4、Window 系统可以去Git官网<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">下载安装程序</a></p>
-<pre><code>$安装完成后，打开Git Bash
-</code></pre><p>5、安装完成后，还需要最后一步设置，在命令行输入：</p>
-<pre><code>$ git config --global user.name &quot;Your Name&quot;
-$ git config --global user.email &quot;email@example.com&quot;
-每个机器都必须自报家门：你的名字和Email地址。用了--global参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
-</code></pre><p>6、生成密钥，关联远端仓库时候需要提供公钥，本地保存私钥.</p>
-<pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
-在本地/User/.ssh/ 目录下有会生成两个文件id_rsa、id_rsa.pub，id_rsa文件保存的是私钥，保存于本地，id_rsa.pub文件保存的是公钥，需要将里面内容上传到远端仓库
-</code></pre><p>7、查看用户名和邮箱地址.</p>
-<pre><code>$ git config user.name
-$ git config user.email
-</code></pre>
-        
-          <p class="article-more-link">
-            <a href="/2015/01/03/20150103-Github-comm/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/03/20150103-Github-comm/" data-id="cjno0eiql0003pq8mn5kewu36" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git-Command/">Git-Command</a></li></ul>
 
     </footer>
   </div>
@@ -902,7 +902,7 @@ $ git config user.email
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git-Command/">Git-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Command/">Hexo-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-blog/">Hexo-blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/专业词汇/">专业词汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常见排序算法/">常见排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浅谈库文件/">浅谈库文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译和链接/">编译和链接</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络通信七层模型/">网络通信七层模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件设计模式/">软件设计模式</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-知识点/">C++知识点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git-Command/">Git-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Command/">Hexo-Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-blog/">Hexo-blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Homebrew/">Homebrew</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/专业词汇/">专业词汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常见排序算法/">常见排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浅谈库文件/">浅谈库文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编译和链接/">编译和链接</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络通信七层模型/">网络通信七层模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件设计模式/">软件设计模式</a></li></ul>
     </div>
   </div>
 
@@ -912,7 +912,7 @@ $ git config user.email
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git-Command/" style="font-size: 10px;">Git-Command</a> <a href="/tags/Hexo-Command/" style="font-size: 10px;">Hexo-Command</a> <a href="/tags/Hexo-blog/" style="font-size: 10px;">Hexo-blog</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/专业词汇/" style="font-size: 10px;">专业词汇</a> <a href="/tags/常见排序算法/" style="font-size: 10px;">常见排序算法</a> <a href="/tags/浅谈库文件/" style="font-size: 10px;">浅谈库文件</a> <a href="/tags/编译和链接/" style="font-size: 10px;">编译和链接</a> <a href="/tags/网络通信七层模型/" style="font-size: 10px;">网络通信七层模型</a> <a href="/tags/软件设计模式/" style="font-size: 10px;">软件设计模式</a>
+      <a href="/tags/C-知识点/" style="font-size: 10px;">C++知识点</a> <a href="/tags/Git-Command/" style="font-size: 10px;">Git-Command</a> <a href="/tags/Hexo-Command/" style="font-size: 10px;">Hexo-Command</a> <a href="/tags/Hexo-blog/" style="font-size: 10px;">Hexo-blog</a> <a href="/tags/Homebrew/" style="font-size: 10px;">Homebrew</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/专业词汇/" style="font-size: 10px;">专业词汇</a> <a href="/tags/常见排序算法/" style="font-size: 10px;">常见排序算法</a> <a href="/tags/浅谈库文件/" style="font-size: 10px;">浅谈库文件</a> <a href="/tags/编译和链接/" style="font-size: 10px;">编译和链接</a> <a href="/tags/网络通信七层模型/" style="font-size: 10px;">网络通信七层模型</a> <a href="/tags/软件设计模式/" style="font-size: 10px;">软件设计模式</a>
     </div>
   </div>
 
@@ -921,7 +921,7 @@ $ git config user.email
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
     </div>
   </div>
 
@@ -938,6 +938,10 @@ $ git config user.email
           </li>
         
           <li>
+            <a href="/2016/03/10/20160310-C++/">C++</a>
+          </li>
+        
+          <li>
             <a href="/2016/02/03/20160203-浅谈库文件/">浅谈库文件</a>
           </li>
         
@@ -947,10 +951,6 @@ $ git config user.email
         
           <li>
             <a href="/2016/01/25/20160125-开放系统互联/">开放系统互联</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/03/20160103-计算机专业词汇/">计算机专业常见词汇</a>
           </li>
         
       </ul>
